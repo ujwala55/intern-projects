@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:normal;
+}
+
+body{
+    background:#eee;
+}
+/* header */
+header {
+    background: transparent;
+    height:60px;
+    width: 100%;
+    background-color:rgba(32, 32, 32, 0.5);
+    padding: 25px;
+    position: fixed;
+}
+#logo {
+    height: 50px;
+    width: 50px;
+    margin-top: -7px;
+    border-radius: 190px;
+}
+ul {
+    list-style: none;
+    margin-left: 37em;
+} 
+li >a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: aliceblue;
+    border-radius: 30px;
+    margin: 15px;
+    padding: 7px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.flex-container {
+    display: flex;
+}
+ul > li {
+    display: inline;
+}
+header a:hover {
+    color: black;
+    background-color: aliceblue;
+}
+header a.active {
+    color: #61dafb;
+    border-bottom: 2px solid #61dafb;
+} 
+/* h3{ */
+    /* margin:20px auto 20px auto; */
+    /* padding:20px; */
+/* } */
+/* body */
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:15px;
+    align-items: flex-start;
+    padding:135px 5%;
+}
+.container  .main-video{
+     background: #fff;
+     border-radius: 5px;
+     padding:5px;
+}
+.container .main-video video{
+    width:100%;
+    border-radius:5px;
+}
+.container  .video-list{
+    background: #fff;
+    border-radius: 5px;
+    height:440px;
+    overflow-y: scroll;
+}
+.container  .video-list::-webkit-scrollbar{
+    width: 7px;
+}
+.container  .video-list::-webkit-scrollbar-track{
+    background: #ccc;
+    border-radius:50px;
+}
+.container  .video-list::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius:50px;
+}
+.container  .video-list .vid video{
+    width:100px;
+    border-radius: 5px;
+}
+.container  .video-list .vid{
+    display: flex;
+    align-items:center;
+    gap:15px;
+    background:#f7f7f7;
+    border-radius:5px;
+    margin:10px 0px;
+    padding:20px;
+    border:1px solid rgba(0,0,0,.1);
+    cursor:pointer;
+}
+.container  .video-list .vid:hover{
+    background: #eee;
+}
+.container  .video-list .vid.active{
+    background: #3c3d3d;
+}
+/* responsive */
+@media(max-width:991px){
+    .container{
+        grid-template-columns: 1.5fr 1fr;
+        padding:10px
+    }
+}
+@media(max-width:768px){
+
+    .container{
+        grid-template-columns:1fr;
+     
+    }
+}
